@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Header from './components/Headers';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Page from './Active_link';
+import Home from './components/Home';
+import Explore from './components/Explore';
+import Messages from './components/Messages';
+import Notification from './components/Notification';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default class App extends Component {
+  render() {
+    return (
+    <BrowserRouter>
+      <Container fluid={false}>
+        <Row>
+          <Col lg={3}><Header /></Col>
+          <Col lg={6} className="content">
+            <Route
+              exact
+              path="/"
+              render={props => (
+                <Page {...props} component={Home} title="Home" />
+            )}
+            />
+            <Route
+              path="/explore"
+                render={props => (
+                  <Page {...props} component={Explore} title="Explore" />
+              )}
+            />
+            <Route
+              path="/notification"
+                render={props => (
+                  <Page {...props} component={Notification} title="Notification" />
+              )}
+            />
+            <Route
+              path="/messages"
+                render={props => (
+                  <Page {...props} component={Messages} title="Messages" />
+              )}
+            />
+          </Col>
+          <Col lg={3}>Something should comes up for this part.</Col>
+        </Row>
+      </Container>
+    </BrowserRouter>
+    )
+  }
 }
 
-export default App;
+
