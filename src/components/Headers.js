@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import { NavLink } from 'react-router-dom';
 import TwitterIcon from '../imgs/twitter.png';
+
 const Header = () => (
   <div className="sidenav">
     <Nav className="flex-column">
