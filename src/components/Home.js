@@ -14,15 +14,11 @@ export default class Home extends Component {
     }
     
     addTo = (post) => {
-        var oldAmount = this.state.posts.length;
         post.id = Math.random();
         let posts = [...this.state.posts, post];
         this.setState({
             posts: posts
         })
-        var newAmount = posts.length;
-        var totalAmount = newAmount - oldAmount;
-        console.log(totalAmount);
     }
     render() {
         return (

@@ -23,6 +23,7 @@ export default class App extends Component {
             <Route
               exact
               path="/"
+              
               render={props => (
                 <Page {...props} component={Home} title="Home" />
             )}
