@@ -1,0 +1,17 @@
+[
+  {
+      "msg": "Something cool happend.",
+      "id": "1",
+      "city": "October 22nd 2019, 9:29:09 pm"
+  },
+  {
+      "msg": "Something cool .",
+      "id": "2",
+      "city": "October 22nd 2019, 9:29:10 pm"
+  },
+  {
+      "msg": "Something cool happend.",
+      "id": "3",
+      "city": "October 22nd 2019, 9:29:09 pm"
+  }
+]

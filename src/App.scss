@@ -76,12 +76,20 @@ hr {
   }
 }
 
-.profile-image {
-  width: 60px;
-  border-radius: 50px;
-  margin-right: 20px;
+.profile {
+  h4 {
+    color: #fff;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+    display: block;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    margin-top: 35px;
+    
+  }
 }
-
 .post-input {
   width: 100%;
   height: 35px;
@@ -111,4 +119,9 @@ hr {
     font-size: 12px;
     top: 12px;
   }
+}
+
+.posts-section {
+  height: 300px;
+  overflow-y: scroll;
 }

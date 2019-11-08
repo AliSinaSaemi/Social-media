@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Posts = ({posts}) => {
+
     const postsList = posts.length ? (
         posts.map(post =>{
             return (
@@ -13,7 +14,8 @@ const Posts = ({posts}) => {
         <p>There is no posts here for now !</p>
     )
     return (
-        <div>{postsList}</div>
+          <div>{postsList}</div>
+
     )
 }
 

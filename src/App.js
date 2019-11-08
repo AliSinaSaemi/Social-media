@@ -9,6 +9,7 @@ import Home from './components/Home';
 import Explore from './components/Explore';
 import Messages from './components/Messages';
 import Notification from './components/Notification';
+import FetchRandomUser from './components/Api';
 import './App.scss';
 
 
@@ -47,7 +48,9 @@ export default class App extends Component {
               )}
             />
           </Col>
-          <Col lg={3}>Something should comes up for this part.</Col>
+          <Col lg={3}>
+            <FetchRandomUser />
+          </Col>
         </Row>
       </Container>
     </BrowserRouter>

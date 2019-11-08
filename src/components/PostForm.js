@@ -21,8 +21,7 @@ export default class PostForm extends Component {
         return (
             <form onSubmit={this.handleSubmit} className="post_adder">
                 <div className="d-flex flex-row">
-                    <img className="profile-image" src={ProfileImage} alt=""/>
-                    <input className="post-input" type="text" id="post" placeholder="What is in your mind" onChange={this.handleChange} value={this.state.msg}/>
+                    <input className="post-input mb-4" type="text" id="post" placeholder="What is in your mind" onChange={this.handleChange} value={this.state.msg}/>
                 </div>
                 <button className="btn btn-primary">Post</button>
             </form>
